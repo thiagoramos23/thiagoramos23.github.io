@@ -4,6 +4,9 @@ title: "It's all about the concepts!"
 date: 2019-04-06 13:32:20 +0300
 description: It's all about the concepts. You should know the concepts if you want to be a great developer. # Add post description (optional)
 img: all-about-the-concepts.jpg # Add image post (optional)
+fig-caption: all-about-the-concepts # Add figcaption (optional)
+tags: [Ideas, Concepts, OO, DDD, Developer]
+
 ---
 You want to be a great developer, a software engineer that can write code in multiple languages, a person that knows how to use Rails, Django, all or most of spring projects and Hibernate, you know ruby, python, Scala, java, javascript and all the universe of javascript libraries and frameworks and you call yourself a software engineer, but you can’t understand the story that your customer is telling you, so you can translate that to software and modelling the problem to inform and communicate to other engineers what to do and how to solve the customer problem. Well, if you recognised yourself in this description you may feel, sometimes, an empty space inside of you like a dark space of fear and regret of having not learned the concepts behind the practice. Or you just know you need more theoretic study.
 
