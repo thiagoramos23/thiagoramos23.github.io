@@ -5,7 +5,7 @@ date: 2019-09-12 13:32:20 +0300
 description: Explicando o que você precisa saber sobre pattern matching com elixir # Add post description (optional)
 img: pattern-matching.jpg # Add image post (optional)
 fig-caption: pattern-matching # Add figcaption (optional)
-tags: [Elixir, Pattern Matching]
+tags: [Elixir, Pattern Matching, Portuguese]
 ---
 Se você ja escreveu alguma equação matemática(x = a + 1), você sabe bem que o "=" não quer dizer atribuição (assignment), na verdade quer dizer que você está dizendo que a expressão x tem o mesmo valor que a expressão "a + 1". Sabendo o valor de x facilmente você saberia o valor de a e vice-versa. Joe Armstrong falava que em algum momento você teve que desaprender o significado algébrico do "=" quando você aprendeu a sua primeira linguagem de programação. 
 

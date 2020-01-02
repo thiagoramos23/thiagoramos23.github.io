@@ -5,7 +5,7 @@ date: 2017-09-12 00:00:00 +0300
 description: Some thoughts about being a remote worker and some hard truths. # Add post description (optional)
 img: remote-work.jpg # Add image post (optional)
 fig-caption: remote-work # Add figcaption (optional)
-tags: [Productivity, Remote, Work, weworremotely] # add tag
+tags: [Productivity, Remote, Work, weworremotely, English] # add tag
 ---
 
 # On Being a Remote Worker
