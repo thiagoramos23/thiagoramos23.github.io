@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Meu nome é Thiago Ramos e eu desenvolvo software a mais de 10 anos sempre aprendendo
   e tentando ser melhor hoje do que eu fui ontem.
 permalink: ':title/'
-baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.quaseninja.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: "http://twitter.com/thramosal"
 
@@ -19,6 +19,7 @@ social-facebook: thiagoramosal
 social-github: thiagoramos23 # add your Github handle
 social-linkedin: thiagoramosal
 social-email: thiagoramos.al@gmail.com
+organization: Quase Ninja
 
 # Disqus
 discus-identifier: mr-brown # add your discus identifier
