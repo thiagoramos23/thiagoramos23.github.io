@@ -275,10 +275,10 @@ Carlos
 Isso pode ser feito para vários tipos de estrutura de dados e inclusive nós usamos no exemplo de recursão.
 Como vocês podem ver, Pattern Matching é uma das ferramentas mais importantes em Elixir e é muito importante que você domine bem para que possa se adequar mais facilmente ao idioma da linguagem. Além, é claro, de entender bem como funciona o paradigma funcional.
 Espero que tenham gostado e se quiserem, me sigam nas redes sociais:
-Instagram: @thiagoramosal
 
 * Youtube: [Meu canal no Youtube](https://www.youtube.com/thiagoramosal)
 * Twitter: [@thramosal](https://twitter.com/thramosal)
+* Instagram: [@thiagoramosal](https://instagram.com/thiagoramosal)
 
 Se você quer ler mais sobre Elixir eu recomendo este site onde o autor está documentando todo o seu aprendizado com a linguagem:
 [https://inquisitivedeveloper.com/tag/lwm-elixir/](https://inquisitivedeveloper.com/tag/lwm-elixir/)
