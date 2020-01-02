@@ -1,1 +1,39 @@
-theme: jekyll-theme-hacker
+title: Olá devs! Meu nome é Thiago Ramos
+description: > # this means to ignore newlines until "baseurl:"
+  Um dia eu serei um ninja. Mas por enquanto eu sou quase ninja. :).
+  Aqui eu escrevo sobre tecnologia, sobre desenvolvimento de software
+  e sobre meus pensamentos gerais sobre a vida, carreira, o mundo e tudo mais.
+  Meu nome é Thiago Ramos e eu desenvolvo software a mais de 10 anos sempre aprendendo
+  e tentando ser melhor hoje do que eu fui ontem.
+permalink: ':title/'
+baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
+url: "http://www.quaseninja.com.br" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: "http://twitter.com/thramosal"
+
+# Author Settings
+author: Thiago Ramos # add your name
+author-img: thiago-ramos.jpg # add your photo
+about-author: Eu sou só mais um developer latino americano. # add description
+social-twitter: @thramosal
+social-facebook: thiagoramosal
+social-github: thiagoramos23 # add your Github handle
+social-linkedin: thiagoramosal
+social-email: thiagoramos.al@gmail.com
+
+# Disqus
+discus-identifier: mr-brown # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
