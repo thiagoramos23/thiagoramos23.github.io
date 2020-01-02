@@ -13,8 +13,13 @@ Já abordei um pouco sobre testes unitários com mocks. Particularmente não ten
 Em programação orientada à objetos, um teste unitário se preocupa com apenas um objeto, ele testa apenas o comportamento daquele objeto, no entanto isto não é uma regra para ser levada ao pé da letra. Alguns testes, tidos como unitários, acabam testando um pouco além das fronteiras do próprio objeto ou da própria unidade à ser testada.
 
 Existe uma discussão muito grande na comunidade sobre as vantagens de se realizar testes unitários da forma mockista X a forma classicista. Quando temos um sistema onde muitos objetos colaboram entre si, uma forma de se testar apenas um objeto é mockando ou criando falsamente os objetos colaboradores, fazendo com que o teste só exercite a unidade que de fato deve ser testada. Ao usar os objetos colaboradores reais o teste unitário acabará por testar todos os objetos colaboradores e isso se caracterizará como um teste de integração entre os objetos e não mais um teste puramente unitário. Como disse a discussão é muito grande e não pretendo incita-la aqui.
-Mas um sistema não é composto só de testes unitários. É necessário que existam testes com um nível mais alto de abstração. No caso de um sistema web o nível mais alto de abstração é testar a funcionalidade no browser, como se fosse um usuário. Existem várias ferramentas para automatizar este processo e em ruby/rails uma das mais populares é a gem Capybara que é usada em conjunto com RSpec para gerar testes chamados de aceitação, ou que simulam o caso de uso como um usuário deve usá-lo, de forma automática. O Capybara em conjunto com RSpec facilita e muito a criação de testes automatizados com o browser mas esses testes podem rapidamente se tornar uma bagunça se não adotarmos táticas e metodologias para reaproveitamento de código, aqui é que entra o padrão page object.
-O padrão Page Object é uma excelente forma de se obter reusabilidade nos seus códigos de testes com browser. Normalmente quando escrevemos testes relacionados à interações com elementos html ou javascript, o código tende a se tornar muito acoplado à página à ser testada. Com Page Objects podemos criar abstrações que acabam por se tornar uma API do caso de uso e escondem a complexidade das APIs para acesso aos campos de um formulário ou tabela por exemplo. Com este padrão podemos também reutilizar o Page Object em outros métodos sempre acessando a sua API, tornando os testes bem mais simples e fáceis de serem lidos. Um outro fator importante é que se mudarmos uma página específica só teremos que mudar em um local nos nossos testes.
+Mas um sistema não é composto só de testes unitários. É necessário que existam testes com um nível mais alto de abstração. No caso de um sistema web o nível mais alto de abstração é testar a funcionalidade no browser, como se fosse um usuário.
+
+Existem várias ferramentas para automatizar este processo e em ruby/rails uma das mais populares é a gem Capybara que é usada em conjunto com RSpec para gerar testes chamados de aceitação, ou que simulam o caso de uso como um usuário deve usá-lo, de forma automática. O Capybara em conjunto com RSpec facilita e muito a criação de testes automatizados com o browser mas esses testes podem rapidamente se tornar uma bagunça se não adotarmos táticas e metodologias para reaproveitamento de código, aqui é que entra o padrão page object.
+
+### O padrão Page Object é uma excelente forma de se obter reusabilidade nos seus códigos de testes com browser.
+
+Normalmente quando escrevemos testes relacionados à interações com elementos html ou javascript, o código tende a se tornar muito acoplado à página à ser testada. Com Page Objects podemos criar abstrações que acabam por se tornar uma API do caso de uso e escondem a complexidade das APIs para acesso aos campos de um formulário ou tabela por exemplo. Com este padrão podemos também reutilizar o Page Object em outros métodos sempre acessando a sua API, tornando os testes bem mais simples e fáceis de serem lidos. Um outro fator importante é que se mudarmos uma página específica só teremos que mudar em um local nos nossos testes.
 
 ## Como Martin Fowler cita em seu famoso texto sobre este padrão:
 
@@ -174,7 +179,7 @@ class IndexResidencePage < BaseObject
 end
 ```
 
-A mesma coisa acontece neste Page Object para a tela de novo registro:
+### A mesma coisa acontece neste Page Object para a tela de novo registro:
 
 ```ruby
 class NewResidencePageObject < BaseObject
@@ -247,7 +252,7 @@ Não existe uma regra básica do que colocar em um Page Object a não ser que os
 
 Se você curtiu, compartilha e manda para os seus amigos.
 
-Se quiser me seguir nas redes sociais, você pode seguir através do:
+## Se quiser me seguir nas redes sociais, você pode seguir através do:
 
 * Youtube: [Youtube Channel(In Portuguese)](https://www.youtube.com/thiagoramosal)
 * Twitter: [@thramosal](https://twitter.com/thramosal)
