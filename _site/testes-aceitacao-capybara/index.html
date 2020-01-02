@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Testes de Aceitação com Capybara/Rspec e Page Objects - Olá devs! Meu nome é Thiago Ramos</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Olá devs! Meu nome é Thiago Ramos" property="og:site_name">
+  
+    <meta content="Testes de Aceitação com Capybara/Rspec e Page Objects" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Um pouco sobre como arquitetar seus testes com Capybara e Page Objects" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/testes-aceitacao-capybara/" property="og:url">
+  
+  
+    <meta content="2016-08-09T18:00:00-03:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/rspec.png" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Portuguese" property="article:tag">
+    
+    <meta content="Ruby" property="article:tag">
+    
+    <meta content="Rspec" property="article:tag">
+    
+    <meta content="Capybara" property="article:tag">
+    
+    <meta content="Page Objects" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@http://twitter.com/thramosal">
+    <meta name="twitter:creator" content="@thramosal">
+  
+    <meta name="twitter:title" content="Testes de Aceitação com Capybara/Rspec e Page Objects">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/testes-aceitacao-capybara/">
+  
+  
+    <meta name="twitter:description" content="Um pouco sobre como arquitetar seus testes com Capybara e Page Objects">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/rspec.png">
+  
+
+	<meta name="description" content="Um pouco sobre como arquitetar seus testes com Capybara e Page Objects">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/thiago-ramos.jpg" alt="Thiago Ramos"></a>
+      </div>
+      <div class="author-name">Thiago Ramos</div>
+      <p>Eu sou só mais um developer latino americano.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/thramosal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/thiagoramosal" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/thiagoramos23" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/thiagoramosal" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:thiagoramos.al@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2020 &copy; Quase Ninja</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/rspec.png alt="Testes de Aceitação com Capybara/Rspec e Page Objects">
+        
+          <figcaption>rpsec</figcaption>
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Testes de Aceitação com Capybara/Rspec e Page Objects</h1>
+        <div class="page-date"><span>2016, Aug 09&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Já abordei um pouco sobre testes unitários com mocks. Particularmente não tenho nenhuma preferência em fazer testes da forma mockista ou da forma classicista, creio que as duas formas são interessantes e servem à propósitos distintos. Enquanto uma está preocupada com a forma como os objetos colaboram entre si, a outra está preocupada no resultado final. Ainda com relação a quantidade de colaboradores com as quais os objetos se preocupam, podemos chama-los de testes unitários, de integração, de aceitação e muitos outros nomes.</p>
+
+<p>Em programação orientada à objetos, um teste unitário se preocupa com apenas um objeto, ele testa apenas o comportamento daquele objeto, no entanto isto não é uma regra para ser levada ao pé da letra. Alguns testes, tidos como unitários, acabam testando um pouco além das fronteiras do próprio objeto ou da própria unidade à ser testada.</p>
+
+<p>Existe uma discussão muito grande na comunidade sobre as vantagens de se realizar testes unitários da forma mockista X a forma classicista. Quando temos um sistema onde muitos objetos colaboram entre si, uma forma de se testar apenas um objeto é mockando ou criando falsamente os objetos colaboradores, fazendo com que o teste só exercite a unidade que de fato deve ser testada. Ao usar os objetos colaboradores reais o teste unitário acabará por testar todos os objetos colaboradores e isso se caracterizará como um teste de integração entre os objetos e não mais um teste puramente unitário. Como disse a discussão é muito grande e não pretendo incita-la aqui.
+Mas um sistema não é composto só de testes unitários. É necessário que existam testes com um nível mais alto de abstração. No caso de um sistema web o nível mais alto de abstração é testar a funcionalidade no browser, como se fosse um usuário. Existem várias ferramentas para automatizar este processo e em ruby/rails uma das mais populares é a gem Capybara que é usada em conjunto com RSpec para gerar testes chamados de aceitação, ou que simulam o caso de uso como um usuário deve usá-lo, de forma automática. O Capybara em conjunto com RSpec facilita e muito a criação de testes automatizados com o browser mas esses testes podem rapidamente se tornar uma bagunça se não adotarmos táticas e metodologias para reaproveitamento de código, aqui é que entra o padrão page object.
+O padrão Page Object é uma excelente forma de se obter reusabilidade nos seus códigos de testes com browser. Normalmente quando escrevemos testes relacionados à interações com elementos html ou javascript, o código tende a se tornar muito acoplado à página à ser testada. Com Page Objects podemos criar abstrações que acabam por se tornar uma API do caso de uso e escondem a complexidade das APIs para acesso aos campos de um formulário ou tabela por exemplo. Com este padrão podemos também reutilizar o Page Object em outros métodos sempre acessando a sua API, tornando os testes bem mais simples e fáceis de serem lidos. Um outro fator importante é que se mudarmos uma página específica só teremos que mudar em um local nos nossos testes.</p>
+
+<h2 id="como-martin-fowler-cita-em-seu-famoso-texto-sobre-este-padrão">Como Martin Fowler cita em seu famoso texto sobre este padrão:</h2>
+
+<blockquote>
+  <p>The basic rule of thumb for a page object is that it should allow a software client to do anything and see anything that a human can. It should also provide an interface that’s easy to program to and hides the underlying widgetry in the window. So to access a text field you should have accessor methods that take and return a string, check boxes should use booleans, and buttons should be represented by action oriented method names. The page object should encapsulate the mechanics required to find and manipulate the data in the gui control itself. A good rule of thumb is to imagine changing the concrete control — in which case the page object interface shouldn’t change.</p>
+</blockquote>
+
+<p>O padrão page object, não necessariamente necessita representar uma página, pode representar um elemento complexo de uma página ou um elemento que se repete em várias páginas. Pode ser usado também para testes de desktop em frameworks como Java/Swing e outros. Um Page Object não deve contem nenhum tipo de assert sendo sua única responsabilidade representar uma página ou um objeto de página mais complexo. É bom que seus métodos retornem atributos como string, date, boolean ou um outro page object.</p>
+
+<p>Para demonstrar o uso de page objects eu preferi mostrar um caso CRUD já que é facilmente entendido por todos e é um caso que apesar de simples, consegue demonstrar o poder de reusabilidade e clareza que o padrão page object nos entrega. É claro que você pode optar por fazer testes mais rigorosos do que estes aqui apresentados, mas a intenção aqui é mostrar o uso do padrão e não, ser o exemplo perfeito de testes de software.</p>
+
+<h3 id="aqui-está-o-page-object-da-página-de-login">Aqui está o Page Object da página de Login:</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">LoginPageObject</span> <span class="o">&lt;</span> <span class="no">BaseObject</span>
+
+  <span class="k">def</span> <span class="nf">visit_root</span>
+    <span class="n">visit</span> <span class="s1">'/'</span>
+    <span class="nb">self</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="n">fill_in</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.user.email'</span><span class="p">),</span> <span class="ss">with: </span><span class="n">user</span><span class="p">.</span><span class="nf">email</span>
+    <span class="n">fill_in</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.user.password'</span><span class="p">),</span> <span class="ss">with: </span><span class="n">user</span><span class="p">.</span><span class="nf">password</span>
+    <span class="n">click_on</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'devise.links.sign_in'</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="começando-com-o-arquivo-de-testes-do-rspec-neste-arquivo-estão-os-testes-de-crud">Começando com o arquivo de testes do RSpec. Neste arquivo estão os testes de crud:</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'rails_helper'</span>
+
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'Residence Integration Tests'</span> <span class="k">do</span>
+  <span class="n">let</span><span class="p">(</span><span class="ss">:user</span><span class="p">)</span> <span class="p">{</span> <span class="n">create</span><span class="p">(</span><span class="ss">:user</span><span class="p">,</span> <span class="ss">email: </span><span class="s1">'admin@admin.com'</span><span class="p">,</span> <span class="ss">password: </span><span class="s1">'123456'</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">let</span><span class="p">(</span><span class="ss">:login_page</span><span class="p">)</span> <span class="p">{</span> <span class="no">LoginPageObject</span><span class="p">.</span><span class="nf">new</span> <span class="p">}</span>
+  <span class="n">let</span><span class="p">(</span><span class="ss">:index_page</span><span class="p">)</span> <span class="p">{</span> <span class="no">IndexResidencePage</span><span class="p">.</span><span class="nf">new</span> <span class="p">}</span>
+
+  <span class="n">context</span> <span class="s1">'#valid_user'</span> <span class="k">do</span>
+
+    <span class="n">before</span> <span class="p">{</span>
+      <span class="n">login_page</span><span class="p">.</span><span class="nf">visit_root</span><span class="p">.</span><span class="nf">login</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="n">context</span> <span class="s1">'List Residences'</span> <span class="k">do</span>
+      <span class="n">let!</span><span class="p">(</span><span class="ss">:residence</span><span class="p">)</span> <span class="p">{</span> <span class="n">create</span><span class="p">(</span><span class="ss">:residence</span><span class="p">,</span> <span class="ss">cep: </span><span class="s1">'57031-530'</span><span class="p">)</span> <span class="p">}</span>
+
+
+      <span class="n">scenario</span> <span class="s1">'Render the Lists of Residences'</span> <span class="k">do</span>
+        <span class="n">index_page</span><span class="p">.</span><span class="nf">visit_page</span>
+        <span class="n">expect</span><span class="p">(</span><span class="n">index_page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_residence</span><span class="p">(</span><span class="n">residence</span><span class="p">)</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="n">scenario</span> <span class="s1">'Click on new'</span> <span class="k">do</span>
+      <span class="n">index_page</span><span class="p">.</span><span class="nf">visit_page</span>
+      <span class="n">new_page</span> <span class="o">=</span> <span class="n">index_page</span><span class="p">.</span><span class="nf">click_on_new</span>
+      <span class="n">expect</span><span class="p">(</span><span class="n">new_page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_current_path</span><span class="p">(</span><span class="n">new_admin_residence_path</span><span class="p">)</span>
+    <span class="k">end</span>
+
+    <span class="n">context</span> <span class="s2">"Create a Residence"</span> <span class="k">do</span>
+      <span class="n">let</span><span class="p">(</span><span class="ss">:new_residence</span><span class="p">)</span> <span class="p">{</span> <span class="n">build</span><span class="p">(</span><span class="ss">:residence</span><span class="p">,</span> <span class="ss">cep: </span><span class="s1">'57000-000'</span><span class="p">)</span> <span class="p">}</span>
+
+      <span class="n">before</span> <span class="p">{</span>
+        <span class="n">index_page</span><span class="p">.</span><span class="nf">visit_page</span>
+      <span class="p">}</span>
+
+      <span class="n">scenario</span> <span class="s1">'Creates a Valid Residence'</span> <span class="k">do</span>
+        <span class="n">new_page</span> <span class="o">=</span> <span class="n">index_page</span><span class="p">.</span><span class="nf">click_on_new</span>
+        <span class="n">new_page</span><span class="p">.</span><span class="nf">fill_in_with_residence</span><span class="p">(</span><span class="n">new_residence</span><span class="p">)</span>
+        <span class="n">index_page</span> <span class="o">=</span> <span class="n">new_page</span><span class="p">.</span><span class="nf">click_on_save</span>
+        <span class="n">expect</span><span class="p">(</span><span class="n">index_page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_message</span><span class="p">(</span><span class="s1">'Domicílio criado com sucesso.'</span><span class="p">)</span>
+      <span class="k">end</span>
+
+      <span class="n">scenario</span> <span class="s1">'Create with invalid value'</span> <span class="k">do</span>
+        <span class="n">new_page</span> <span class="o">=</span> <span class="n">index_page</span><span class="p">.</span><span class="nf">click_on_new</span>
+        <span class="n">new_page</span><span class="p">.</span><span class="nf">fill_in_with_residence</span><span class="p">(</span><span class="n">new_residence</span><span class="p">)</span>
+        <span class="n">new_page</span><span class="p">.</span><span class="nf">make_blank_field</span><span class="p">(</span><span class="s1">'#residence_cep'</span><span class="p">)</span>
+        <span class="n">new_page</span><span class="p">.</span><span class="nf">click_on_save</span>
+        <span class="n">expect</span><span class="p">(</span><span class="n">new_page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_invalid_message_on_div</span><span class="p">(</span><span class="s1">'.residence_cep'</span><span class="p">)</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="n">context</span> <span class="s2">"Editing a Residence"</span> <span class="k">do</span>
+      <span class="n">let!</span><span class="p">(</span><span class="ss">:residence</span><span class="p">)</span> <span class="p">{</span> <span class="n">create</span><span class="p">(</span><span class="ss">:residence</span><span class="p">,</span> <span class="ss">cep: </span><span class="s1">'57031-530'</span><span class="p">)</span> <span class="p">}</span>
+
+      <span class="n">before</span> <span class="p">{</span>
+        <span class="n">index_page</span><span class="p">.</span><span class="nf">visit_page</span>
+      <span class="p">}</span>
+
+      <span class="n">scenario</span> <span class="s1">'Edit the residence with success'</span> <span class="k">do</span>
+        <span class="n">edit_page</span> <span class="o">=</span> <span class="n">index_page</span><span class="p">.</span><span class="nf">click_on_edit</span>
+        <span class="n">edit_page</span><span class="p">.</span><span class="nf">change_field</span><span class="p">(</span><span class="s1">'#residence_cep'</span><span class="p">,</span> <span class="s1">'57000-000'</span><span class="p">)</span>
+        <span class="n">index_page</span> <span class="o">=</span> <span class="n">edit_page</span><span class="p">.</span><span class="nf">click_on_save</span>
+        <span class="n">expect</span><span class="p">(</span><span class="n">index_page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_message</span><span class="p">(</span><span class="s1">'Domicílio atualizado com sucesso.'</span><span class="p">)</span>
+      <span class="k">end</span>
+
+      <span class="n">scenario</span> <span class="s1">'Edit with invalid value'</span> <span class="k">do</span>
+        <span class="n">edit_page</span> <span class="o">=</span> <span class="n">index_page</span><span class="p">.</span><span class="nf">click_on_edit</span>
+        <span class="n">edit_page</span><span class="p">.</span><span class="nf">change_field</span><span class="p">(</span><span class="s1">'#residence_cep'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+        <span class="n">edit_page</span><span class="p">.</span><span class="nf">click_on_save</span>
+        <span class="n">expect</span><span class="p">(</span><span class="n">edit_page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_invalid_message_on_div</span><span class="p">(</span><span class="s1">'.residence_cep'</span><span class="p">)</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="n">context</span> <span class="s2">"Remove residence"</span> <span class="k">do</span>
+      <span class="n">let!</span><span class="p">(</span><span class="ss">:residence</span><span class="p">)</span> <span class="p">{</span> <span class="n">create</span><span class="p">(</span><span class="ss">:residence</span><span class="p">,</span> <span class="ss">cep: </span><span class="s1">'57031-530'</span><span class="p">)</span> <span class="p">}</span>
+
+      <span class="n">scenario</span> <span class="s1">'Remove the residence'</span> <span class="k">do</span>
+        <span class="n">index_page</span><span class="p">.</span><span class="nf">visit_page</span>
+        <span class="n">index_page</span><span class="p">.</span><span class="nf">click_on_remove</span>
+        <span class="n">expect</span><span class="p">(</span><span class="n">index_page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_message</span><span class="p">(</span><span class="s1">'Domicílio foi excluído com sucesso.'</span><span class="p">)</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Este é o Page Object da tela de listagem. Note que o código de mais baixo nível que seria o código de acesso aos elementos de página e código para navegar entre as páginas ou para ir para algum path estão encapsulados em métodos que possuem nomes mais claros. O ideal é testar se todos os elementos que o caso de uso pede estão na tela, mas neste exemplo, só para demonstrar eu verifico, somente, a existência do cep. Note também que os métodos retorna outra página quando há um comportamento que redireciona para uma nova página.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">IndexResidencePage</span> <span class="o">&lt;</span> <span class="no">BaseObject</span>
+
+  <span class="k">def</span> <span class="nf">visit_page</span>
+    <span class="n">visit</span> <span class="n">admin_residences_path</span>
+    <span class="nb">self</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">has_residence?</span><span class="p">(</span><span class="n">residence</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="ss">:xpath</span><span class="p">,</span> <span class="s1">'//table/tbody/tr'</span><span class="p">)</span>
+    <span class="n">has_expected_fields_in_table</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">residence</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">has_message?</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="n">has_content?</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">click_on_new</span>
+    <span class="n">click_link</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'helpers.links.new'</span><span class="p">)</span>
+    <span class="no">NewResidencePageObject</span><span class="p">.</span><span class="nf">new</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">click_on_edit</span>
+   <span class="n">click_on</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'helpers.links.edit'</span><span class="p">)</span>
+   <span class="no">EditResidencePageObject</span><span class="p">.</span><span class="nf">new</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">click_on_remove</span>
+    <span class="n">click_on</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'helpers.links.destroy'</span><span class="p">)</span>
+    <span class="nb">self</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+  <span class="k">def</span> <span class="nf">has_expected_fields_in_table</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">residence</span><span class="p">)</span>
+    <span class="n">content</span><span class="p">.</span><span class="nf">has_content?</span><span class="p">(</span><span class="n">residence</span><span class="p">.</span><span class="nf">name_of_patio</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">content</span><span class="p">.</span><span class="nf">has_content?</span><span class="p">(</span><span class="n">residence</span><span class="p">.</span><span class="nf">cep</span><span class="p">)</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>A mesma coisa acontece neste Page Object para a tela de novo registro:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">NewResidencePageObject</span> <span class="o">&lt;</span> <span class="no">BaseObject</span>
+
+  <span class="k">def</span> <span class="nf">has_current_path?</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">current_path</span> <span class="o">==</span>  <span class="n">path</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">fill_in_with_residence</span><span class="p">(</span><span class="n">residence</span><span class="p">)</span>
+    <span class="n">find</span><span class="p">(</span><span class="s2">"#residence_latitude"</span><span class="p">).</span><span class="nf">set</span><span class="p">(</span><span class="n">residence</span><span class="p">.</span><span class="nf">latitude</span><span class="p">)</span>
+    <span class="n">find</span><span class="p">(</span><span class="s2">"#residence_longitude"</span><span class="p">).</span><span class="nf">set</span><span class="p">(</span><span class="n">residence</span><span class="p">.</span><span class="nf">longitude</span><span class="p">)</span>
+    <span class="n">fill_in</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.type_of_patio'</span><span class="p">),</span> <span class="ss">with: </span><span class="n">residence</span><span class="p">.</span><span class="nf">type_of_patio</span>
+    <span class="n">fill_in</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.name_of_patio'</span><span class="p">),</span> <span class="ss">with: </span><span class="n">residence</span><span class="p">.</span><span class="nf">name_of_patio</span>
+    <span class="n">find</span><span class="p">(</span><span class="s2">"#residence_number"</span><span class="p">).</span><span class="nf">set</span><span class="p">(</span><span class="n">residence</span><span class="p">.</span><span class="nf">number</span><span class="p">)</span>
+    <span class="n">fill_in</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.municipality'</span><span class="p">),</span> <span class="ss">with: </span><span class="n">residence</span><span class="p">.</span><span class="nf">municipality</span>
+    <span class="nb">select</span><span class="p">(</span><span class="s1">'RJ'</span><span class="p">,</span> <span class="ss">from: </span><span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.uf'</span><span class="p">))</span>
+    <span class="n">fill_in</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.cep'</span><span class="p">),</span> <span class="ss">with: </span><span class="n">residence</span><span class="p">.</span><span class="nf">cep</span>
+    <span class="n">fill_in</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.complement'</span><span class="p">),</span> <span class="ss">with: </span><span class="n">residence</span><span class="p">.</span><span class="nf">complement</span>
+    <span class="n">fill_in</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.residencial_phone'</span><span class="p">),</span> <span class="ss">with: </span><span class="n">residence</span><span class="p">.</span><span class="nf">residencial_phone</span>
+    <span class="n">choose</span><span class="p">(</span><span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.housing_situations.own'</span><span class="p">))</span>
+    <span class="n">choose</span><span class="p">(</span><span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.type_residences.house'</span><span class="p">))</span>
+    <span class="n">fill_in</span> <span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.number_of_residents'</span><span class="p">),</span> <span class="ss">with: </span><span class="n">residence</span><span class="p">.</span><span class="nf">number_of_residents</span>
+    <span class="n">choose</span><span class="p">(</span><span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'activerecord.attributes.residence.conditions_of_land_uses.owner'</span><span class="p">))</span>
+    <span class="n">choose</span><span class="p">(</span><span class="s1">'residence_has_energy_power_true'</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">make_blank_field</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+    <span class="n">find</span><span class="p">(</span><span class="n">field</span><span class="p">).</span><span class="nf">set</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">click_on_save</span>
+    <span class="n">click_on</span> <span class="s1">'Criar Domicílio'</span>
+    <span class="no">IndexResidencePage</span><span class="p">.</span><span class="nf">new</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">has_invalid_message_on_div?</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
+    <span class="n">within</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span> <span class="k">do</span>
+      <span class="n">has_content?</span><span class="p">(</span><span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'errors.messages.blank'</span><span class="p">))</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="aqui-está-o-page-object-de-edição">Aqui está o Page Object de edição:</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">EditResidencePageObject</span> <span class="o">&lt;</span> <span class="no">BaseObject</span>
+
+  <span class="k">def</span> <span class="nf">change_field</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="p">).</span><span class="nf">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">click_on_save</span>
+    <span class="n">click_on</span> <span class="s1">'Atualizar'</span>
+    <span class="no">IndexResidencePage</span><span class="p">.</span><span class="nf">new</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">has_invalid_message_on_div?</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
+    <span class="n">within</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span> <span class="k">do</span>
+      <span class="n">has_content?</span><span class="p">(</span><span class="no">I18n</span><span class="p">.</span><span class="nf">t</span><span class="p">(</span><span class="s1">'errors.messages.blank'</span><span class="p">))</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Não existe uma regra básica do que colocar em um Page Object a não ser que os métodos de um page object devem retornar strings, boolean, dates e etc ou um outro page object. Algumas pessoas acham que é melhor colocar as assertions dentro dos page objects evitando assim a duplicação de asserts nos testes. Eu, particularmente, acho que um page object deve encapsular o código de mais baixo nível para acesso à uma página ou componente complexo e os asserts devem permanecer onde eles deveriam estar, ou seja, no próprio teste.</p>
+
+<p>Se você curtiu, compartilha e manda para os seus amigos.</p>
+
+<p>Se quiser me seguir nas redes sociais, você pode seguir através do:</p>
+
+<ul>
+  <li>Youtube: <a href="https://www.youtube.com/thiagoramosal">Youtube Channel(In Portuguese)</a></li>
+  <li>Twitter: <a href="https://twitter.com/thramosal">@thramosal</a></li>
+  <li>Instagram: <a href="https://instagram.com/thiagoramosal">@thiagoramosal</a></li>
+</ul>
+
+<p>Desejo que você se torne um excelente Dev.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Testes de Aceitação com Capybara/Rspec e Page Objects&url=http://localhost:4000/testes-aceitacao-capybara/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/testes-aceitacao-capybara/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/testes-aceitacao-capybara/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Portuguese" class="tag">&#35; Portuguese</a>
+          
+            <a href="/tags#Ruby" class="tag">&#35; Ruby</a>
+          
+            <a href="/tags#Rspec" class="tag">&#35; Rspec</a>
+          
+            <a href="/tags#Capybara" class="tag">&#35; Capybara</a>
+          
+            <a href="/tags#Page Objects" class="tag">&#35; Page Objects</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//disqus_bkGQJSFdDU.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
