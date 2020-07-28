@@ -20,10 +20,11 @@ Se você chegou aqui através do link no curso então os passos que você deve s
 
 3. Você pode seguir os passos do site que basicamente são esses comandos:
 	* `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
+
   * `\curl -sSL https://get.rvm.io | bash`
 
 4. Em um terminal, entre na pasta do projeto. Você deve ver a mensagem:
-	`Required ruby-2.5.1 is not installed. To install do: 'rvm install "ruby-2.5.1"'`
+	* `Required ruby-2.5.1 is not installed. To install do: 'rvm install "ruby-2.5.1"'`
 
 5. Execute o comando `rvm install ruby-2.5.1`. Este passo deve demorar um pouco
 
@@ -38,14 +39,14 @@ Se você chegou aqui através do link no curso então os passos que você deve s
 	Como resolver este problema depende muito de como você instalou o Postgres na sua máquina.
 	Eu uso o [postgres app](https://postgresapp.com/downloads.html1). Aconselho usar o app porque é mais fácil de configurar e roda do mesmo jeito.
 	Após baixar e instalar o app. Rode este comando:
-	`gem install pg -v '1.1.4' -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/12/bin/pg_config`
+	 * `gem install pg -v '1.1.4' -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/12/bin/pg_config`
 	Após isso rode novamente o comando `bundle install`
 
 10. Rode o comando: `rake db:create && rake db:migrate && rake db:seed`
 
 11. Rode o comando: `rails server`
 	Você deve ver algo do tipo:
-```bash
+{{ "{% highlight bash " }}%}
 	=> Booting Puma
 	=> Rails 6.0.2.1 application starting in development
 	=> Run `rails server --help` for more startup options
@@ -56,7 +57,7 @@ Se você chegou aqui através do link no curso então os passos que você deve s
 	* Listening on tcp://127.0.0.1:3000
 	* Listening on tcp://[::1]:3000
 	Use Ctrl-C to stop
-```
+{{ "{% endhighlight " }}%}
 
 Qualquer problema pode falar comigo através das redes sociais.
 
