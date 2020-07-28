@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Como configurar Ruby e RVM"
-date: 2010-03-13 23:32:20 +0300
+date: 2020-07-25 10:10:10 +0300
 description: Como configurar Ruby e RVM para o curso de iOS # Add post description (optional)
-# img: hacker.jpeg # Add image post (optional)
+img: server.jpg # Add image post (optional)
 fig-caption: programador # Add figcaption (optional)
 tags: [Inspirador, Motivacional, Iniciante, Beginner]
 
