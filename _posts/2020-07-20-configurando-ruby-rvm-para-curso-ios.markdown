@@ -5,7 +5,7 @@ date: 2020-07-25 10:10:10 +0300
 description: Como configurar Ruby e RVM para o curso de iOS # Add post description (optional)
 img: server.jpg # Add image post (optional)
 fig-caption: programador # Add figcaption (optional)
-tags: [Inspirador, Motivacional, Iniciante, Beginner]
+tags: [Ruby, Rails, RVM, Iniciante, Beginner]
 
 ---
 # Como configurar o Ruby e RVM
