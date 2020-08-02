@@ -1,6 +1,6 @@
 title: Olá devs! Meu nome é Thiago Ramos
 description: > # this means to ignore newlines until "baseurl:"
-  Um dia eu serei um ninja. Mas por enquanto eu sou quase ninja. :).
+  Um dia eu serei um ninja (Será?). Mas por enquanto eu sou quase ninja. :).
   Aqui eu escrevo sobre tecnologia, sobre desenvolvimento de software
   e sobre meus pensamentos gerais sobre a vida, carreira, o mundo e tudo mais.
   Meu nome é Thiago Ramos e eu desenvolvo software a mais de 10 anos sempre aprendendo
@@ -13,7 +13,7 @@ site-twitter: "http://twitter.com/thramosal"
 # Author Settings
 author: Thiago Ramos # add your name
 author-img: thiago-ramos.jpg # add your photo
-about-author: Eu sou só mais um developer latino americano. # add description
+about-author: Produzindo bugs desde 2003. # add description
 social-twitter: thramosal
 social-facebook: thiagoramosal
 social-github: thiagoramos23 # add your Github handle
