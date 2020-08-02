@@ -45,7 +45,7 @@ Se você chegou aqui através do link no curso então os passos que você deve s
 10. Rode o comando: `rake db:create && rake db:migrate && rake db:seed`
 
 11. Rode o comando: `rails server`. Você deve ver algo do tipo:
-```bash
+{% highlight bash %}
 	=> Booting Puma
 	=> Rails 6.0.2.1 application starting in development
 	=> Run `rails server --help` for more startup options
@@ -56,7 +56,7 @@ Se você chegou aqui através do link no curso então os passos que você deve s
 	* Listening on tcp://127.0.0.1:3000
 	* Listening on tcp://[::1]:3000
 	Use Ctrl-C to stop
-```
+{% endhighlight %}
 
 Qualquer problema pode falar comigo através das redes sociais.
 
