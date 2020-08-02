@@ -46,16 +46,16 @@ Se você chegou aqui através do link no curso então os passos que você deve s
 
 11. Rode o comando: `rails server`. Você deve ver algo do tipo:
 {% highlight bash %}
-	=> Booting Puma
-	=> Rails 6.0.2.1 application starting in development
-	=> Run `rails server --help` for more startup options
-	Puma starting in single mode...
-	* Version 4.3.5 (ruby 2.5.1-p57), codename: Mysterious Traveller
-	* Min threads: 5, max threads: 5
-	* Environment: development
-	* Listening on tcp://127.0.0.1:3000
-	* Listening on tcp://[::1]:3000
-	Use Ctrl-C to stop
+=> Booting Puma
+=> Rails 6.0.2.1 application starting in development
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.5 (ruby 2.5.1-p57), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:3000
+* Listening on tcp://[::1]:3000
+Use Ctrl-C to stop
 {% endhighlight %}
 
 Qualquer problema pode falar comigo através das redes sociais.
