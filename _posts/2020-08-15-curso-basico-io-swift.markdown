@@ -23,7 +23,9 @@ Neste primeiro vídeo eu falo sobre auto layout e como ele afeta a posicionament
 
 No segundo vídeo da série nós começamos a criar o nosso primeiro aplicativo de To Do. Nesse vídeo eu mostro como usar Storyboards e mostro como usar o auto layout para criar uma célula em um TableView. Também confifguramos a parte inicial do projeto:
 
-* Vídeo será lançado no dia 19 de Agosto
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5Z7TXUCbLaY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Conforme os outros vídeos forem sendo lançados, eles serão postados aqui.
 
 Se quiser me seguir e/ou conversar comigo pode me achar nesses links:
 
