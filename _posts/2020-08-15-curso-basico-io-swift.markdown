@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Curso iOS e Swift
-date: 2020-08-15  00:00:00 +0300
+date: 2020-08-15  23:00:00 +0300
 description: Primeiro curso que ministrei para a Digital Innovation One. # Add post description (optional)
 img: mac.jpg # Add image post (optional)
 fig-caption: curso # Add figcaption (optional)
@@ -24,11 +24,11 @@ Bom, chega de enrolação. Este post vai acabar ficando bem longo porque vou pos
 
 Neste primeiro vídeo eu falo sobre auto layout e como ele afeta a posicionamento dos componentes gráficos em vários tamanhos de telas diferentes. Explico o porque ele existe de forma bem suscinta e mostro alguns exemplos de como usá-lo. Em uma futura aula eu mostro em um exemplo mais realista como usamos auto layout para desenhar uma tela e seus componentes. Espero que curtam essa primeira aula e se curtirem não esqueçam de dar aquele joinha e se inscrever no canal.
 
-<center><iframe width="700" height="500" src="https://www.youtube.com/embed/-VGmS9GXtqw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="800" height="600" src="https://www.youtube.com/embed/-VGmS9GXtqw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 No segundo vídeo da série nós começamos a criar o nosso primeiro aplicativo de To Do. Nesse vídeo eu mostro como usar Storyboards e mostro como usar o auto layout para criar uma célula em um TableView. Também confifguramos a parte inicial do projeto:
 
-<center><iframe width="700" height="500" src="https://www.youtube.com/embed/5Z7TXUCbLaY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="800" height="600" src="https://www.youtube.com/embed/5Z7TXUCbLaY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 Conforme os outros vídeos forem sendo lançados, eles serão postados aqui.
 
