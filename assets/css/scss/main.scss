@@ -136,6 +136,11 @@ table tfoot td {
   clear: both;
 }
 
+.wrap-content {
+  padding: 20px;
+  font-size: 1.3em;
+}
+
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 @import 'parts/home-page';
 
