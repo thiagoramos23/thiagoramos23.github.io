@@ -38,6 +38,6 @@ Conforme os outros vídeos forem sendo lançados, eles serão postados aqui.
 
 Se quiser me seguir e/ou conversar comigo pode me achar nesses links:
 
-* Youtube: [Youtube Channel(In Portuguese)](https://www.youtube.com/thiagoramosal)
+* Youtube: [Youtube](https://www.youtube.com/thiagoramosal)
 * Twitter: [@thramosal](https://twitter.com/thramosal)
 * Instagram: [@thiagoramosal](https://instagram.com/thiagoramosal)
