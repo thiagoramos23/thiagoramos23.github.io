@@ -30,6 +30,10 @@ No segundo vídeo da série nós começamos a criar o nosso primeiro aplicativo 
 
 <center><iframe width="800" height="600" src="https://www.youtube.com/embed/5Z7TXUCbLaY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
+No terceiro vídeo da série nós vamos codar de verdade e vamos criar a nossa primeira `TableViewController`. Vamos criar o model Task, os controllers e vamos usar dados brutos para podermos implementar os métodos obrigatórios do UITableViewController que são UITableViewDelegate e UITableViewDataSource. Vamos aprender como criar uma classe para uma célula customizada, como associar, usando IBOutlet, os campos em um storyboard ou uma célula para a classe em Swift e vamos aprender como passar dados para um célula e como associar a célula no Storyboard diretamente com o controller. No final dessa aula você será capaz de criar um TableViewController com uma célula customizada e será capaz de implementar os métodos responsáveis por renderizar as células no Storyboard.
+
+<center><iframe width="800" height="600" src="https://www.youtube.com/embed/kGiIYTaTSu0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
 Conforme os outros vídeos forem sendo lançados, eles serão postados aqui.
 
 Se quiser me seguir e/ou conversar comigo pode me achar nesses links:
