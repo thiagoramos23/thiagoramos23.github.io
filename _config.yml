@@ -25,7 +25,7 @@ organization: Quase Ninja
 discus-identifier: quaseninja # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-55550920-2
 
 # Build Settings
 markdown: kramdown
