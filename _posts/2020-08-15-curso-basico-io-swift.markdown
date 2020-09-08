@@ -34,6 +34,32 @@ No terceiro vídeo da série nós vamos codar de verdade e vamos criar a nossa p
 
 <center><iframe width="800" height="600" src="https://www.youtube.com/embed/kGiIYTaTSu0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
+No quarto vídeo da série. Nesta aula vamos iniciar a criação da tela onde nós vamos criar nossas tasks que serão exibidas na tela de listagem. 
+Falaremos sobre como associar componentes do tipo TextField e UIPicker, como fazer uma célula interativa onde dentro da célula existe um componente de texto. 
+Falaremos sobre como associar esses componentes e adicionar os eventos aos componentes de tela. Também criaremos todo o código para tornar a tela de criação de tasks.
+
+<center><iframe width="800" height="600" src="https://www.youtube.com/embed/ZujPIRf5u7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+Este é o quinto vídeo da série. Nesta aula vamos criar a tela para selecionar as categorias de cada task. Vamos também finalizar todo o código de interação entre as telas para que possamos
+ter o aplicativo totalmente funcional.
+
+<center><iframe width="800" height="600" src="https://www.youtube.com/embed/wEqmw8PXyHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+Este é o sexto vídeo da série. Nesta aula vamos implementar o banco de dados local para que possamos salvar as nossas tasks de forma que os dados se mantenham persistidos depois de fecharmos a aplicação e reabrirmos.
+Para isso iremos utilizar o Core Data.
+
+<center><iframe width="800" height="600" src="https://www.youtube.com/embed/jHSIkPNtd-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+Este é o sétimo vídeo da série. Nesta aula vamos continuar a implementação da framework de Core Data na nossa aplicação de tasks.
+Especificamente iremos implementar toda a criação do Core Data Stack.
+
+<center><iframe width="800" height="600" src="https://www.youtube.com/embed/eldf_YqE7nk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+Este é o oitavo vídeo da série. Nesta aula vamos finalizar a implementação do Core Data e finalizar o App. Ao final desta aula você terá aprendido como implementar a stack do Core Data e como salvar os seus objetos 
+com Core Data.
+
+<center><iframe width="800" height="600" src="https://www.youtube.com/embed/MTvUmkRGPkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  
 Conforme os outros vídeos forem sendo lançados, eles serão postados aqui.
 
 Se quiser me seguir e/ou conversar comigo pode me achar nesses links:
