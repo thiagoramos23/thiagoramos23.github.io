@@ -16,7 +16,7 @@ fazendo agora.
 Então lá vai.
 
 - No momento eu estou trabalhando muito nos projetos da empresa onde trabalho, [Tidy](tidy.com), e isso me ocupa boa parte do meu dia. 
-- Outro projeto que é constante na minha vida é o meu podcast [2DevsPodcast](http://2devscast.com.br) o qual eu divido com o meu amigo Rachid Calazans. Esse projeto é muito importante para mim pois me possibilita 
+- Outro projeto que é constante na minha vida é o meu podcast [2DevsPodcast](https://2devs.simplecast.com) o qual eu divido com o meu amigo Rachid Calazans. Esse projeto é muito importante para mim pois me possibilita 
 expor minhas idéias e também conhecer pessoas de todo o Brasil, as quais eu não conheceria se não tivesse um podcast. Ouvir a história de outras pessoas me motiva muito e me faz sair da minha bolha, o que é muito bom
 porque me mostra o quão diversa é a vida e as infinitas possibilidades que existem.
 - Atualmente tenho me dedicado a finalizar um pequeno aplicativo para MacOS. Na realidade é um Pomodoro App no qual eu desenvolvi totalmente guiado por testes. O próximo passo é gravar os vídeos explicando como fazer esse
