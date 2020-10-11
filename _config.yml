@@ -1,9 +1,9 @@
 title: Talvez não existam ninjas na programação. Mas podemos ser Quase Ninjas.
 description: > # this means to ignore newlines until "baseurl:"
-  Um dia eu serei um ninja (Será?). Mas por enquanto eu sou quase ninja. :).
+  Produzindo bugs desde 2003.
   Aqui eu escrevo sobre tecnologia, sobre desenvolvimento de software
-  e sobre meus pensamentos gerais sobre a vida, carreira, o mundo e tudo mais.
-  Meu nome é Thiago Ramos e eu desenvolvo software a mais de 10 anos sempre aprendendo
+  e sobre meus pensamentos mais aleatórios.
+  Meu nome é Thiago Ramos e eu desenvolvo software há um bom tempo, sempre aprendendo
   e tentando ser melhor hoje do que eu fui ontem.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
