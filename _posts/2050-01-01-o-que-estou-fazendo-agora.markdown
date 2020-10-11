@@ -10,7 +10,7 @@ tags: [Curso, iOS, Swift] # add tag
 
 # O que eu estou fazendo agora?
 
-Inspirado pelo site do Derek Sivers que é um dos meus autores preferidos, eu resolvi criar uma página no meu blog onde eu falo o que eu estou 
+Inspirado pelo site do [Derek Sivers](https://sive.rs) que é um dos meus autores preferidos, eu resolvi criar uma página no meu blog onde eu falo o que eu estou 
 fazendo agora.
 
 Então lá vai.
