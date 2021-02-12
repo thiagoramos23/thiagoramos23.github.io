@@ -48,7 +48,7 @@ So, the author starts by creating the core of the application which consists sol
 
 This approach has a name in the architecture world which is the Hexagonal architecture.
 
-[Hexagonal Architectrure](https://apiumhub.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-26-at-09.36.50.png)
+![Hexagonal Architectrure](https://apiumhub.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-26-at-09.36.50.png)
 
 In the hexagonal architecture your core business logic is in the center and all the infrastructure code is in the boundaries, which in this case means:
 
