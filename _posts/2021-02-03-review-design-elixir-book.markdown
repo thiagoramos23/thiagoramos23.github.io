@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Review of the Book: Design Elixir Systems with OTP
+title: Review of the Book Design Elixir Systems with OTP
 date: 2021-02-10 00:00:00 +0300
 description: A review of the book and some thoughts about it. # Add post description (optional)
 img: book.jpg # Add image post (optional)
 fig-caption: book-review # Add figcaption (optional)
 tags: [English, Book, Review] # add tag
 ---
+
+# Review of the Book Design Elixir Systems With OTP
 
 This book by Bruce Tate is, for sure, one of the best findings that I did this year.
 
