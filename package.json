@@ -16,7 +16,7 @@
     "imagemin-pngquant": "^5.0.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-jscs": "^4.1.0",
     "gulp-jshint": "^2.1.0",
     "jshint": "^2.11.0-rc1"
